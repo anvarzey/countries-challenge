@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+:root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue-dm: hsl(207, 26%, 17%);
+  --very-dark-blue-lm: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+  --font: 'Nunito Sans', sans-serif;
+  --bckg-color: var(--very-light-gray);
+  --bckg-header: var(--very-light-gray);
+  --font-color: var(--very-dark-blue-lm);
+  --max-width: 1100px;
+  --search-bar-color: var(--very-dark-blue-lm);
+  --search-plcehldr-color: var(--dark-gray);
+  --loader-color: var(--dark-blue);
+}
+
+body{
+  font-family: var(--font);
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container[theme= 'dark']{
+  --bckg-color: var(--very-dark-blue-dm);
+  --bckg-header: var(--dark-blue);
+  --font-color: var(--very-light-gray);
+  --search-bar-color: var(--very-light-gray);
+  --search-plcehldr-color: var(--very-light-gray);
+  --loader-color: var(--white);
+}
+
+.app-container{
+  margin: 0;
+  min-height: 100vh;
+  height: auto;
+  background-color: var(--bckg-color);
+  padding-bottom: 1.5em;
+
+}
+
+.search-and-filter-container{
+  max-width: var(--max-width);
+  padding-inline: 1rem;
+  margin: 1.5em auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.weight-increased{
+  font-weight: 600;
+}
+

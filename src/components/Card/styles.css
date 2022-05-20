@@ -1,0 +1,40 @@
+.card{
+  width: 16em;
+  height: 20.5em;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--bckg-header);
+}
+
+.card-image{
+  height: 10em;
+  width: 100%;
+}
+
+.flag{
+  border-radius: 5px 5px 0 0;
+  object-fit: fill;
+  width: 100%;
+
+}
+.card-text{
+  font-size: 12px;
+  height: 8em;
+  width: 80%;
+  margin: 1.5em auto;
+  color: var(--font-color);
+}
+
+.card-text p{
+  margin: 0.4em 0;
+  font-weight: 300;
+}
+
+
+.country-name{
+  font-size: 16px;
+  margin: 0 0 0.85em;
+  font-weight: 800;
+}

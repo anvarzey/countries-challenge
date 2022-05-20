@@ -1,0 +1,12 @@
+.cards-container{
+  display: grid;
+  max-width: var(--max-width);
+  row-gap: 3em;
+  column-gap: 4.7em;
+  grid-auto-rows: 20.5em;
+  grid-template-columns: repeat(auto-fill, minmax(16em, 1fr));
+  margin: 1.75rem auto 0;
+  justify-items: center;
+  align-items: center;
+
+}

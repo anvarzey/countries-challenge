@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Home from './pages/Home';
+import Region from './pages/Region';
+import CountryFound from './pages/CountryFound';
+import DetailedCountry from './pages/DetailedCountry';
+import React, { useState, createContext } from 'react';
 
-function App() {
+export const ThemeContext = createContext();
+
+export default function App() {
+  const [theme, setTheme] = useState('light');
+
+  const changeTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeContext.Provider value={{ theme, changeTheme }}>
+      <div className='app-container' theme={theme}>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/region/:regionName' element={<Region />} />
+          <Route path='/search/:countryName' element={<CountryFound />} />
+          <Route path='/country/:detailedName' element={<DetailedCountry />} />
+        </Routes>
+      </div>
+    </ThemeContext.Provider>
   );
 }
-
-export default App;
